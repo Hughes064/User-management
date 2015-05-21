@@ -1,0 +1,26 @@
+h1, h3{
+	color: #DD0426;
+	text-align: center;
+	font-family: 'Dancing Script', cursive;
+}
+
+a:hover {
+	color: 273043;
+}
+
+.create, .back {
+	margin-top: 10px;
+ }
+
+.errors {
+	text-align: center;
+	font-family: 'Inconsolata';
+	color: #F02D3A;
+}
+ 
+.userInfo {
+	text-align: center;
+	font-family: 'Dancing Script', cursive;
+	color: #9197AE;
+
+}

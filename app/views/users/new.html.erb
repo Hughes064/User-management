@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="/assets/style.css">
+	<link href='http://fonts.googleapis.com/css?family=Dancing+Script' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'>
+	<title>New User</title>
+</head>
+<body>
+
+	<% 
+		if @errors
+			@errors.each do |error| 
+	%>
+		<p class="errors"><%= error %></p>
+ 		<%	end 
+ 		end
+
+	%>
+ 
+
+	<div class="container">
+	<div class="row">
+		<div class="col-md-2"></div>
+		<div class="col-md-8 form-group">
+			<h1>Please enter your information</h1>
+			<form action="/users" method="post">
+				<input type= "hidden" name="authenticity_token" value="<%= form_authenticity_token %>"> 
+				<label for="first name">First Name</label>
+				<input class="form-control" type="text" name="fristName">
+				<label for="first name">Last Name</label>
+				<input class="form-control" type="text" name="lastName">
+				<label for="first name">Email address</label>
+				<input class="form-control" type="text" name="emailAddress">
+				<label for="first name">password</label>
+				<input class="form-control" type="password" name="password">
+				<button class="btn btn-primary create pull-right">Create</button>
+				<a href="/users/back"><button class="btn btn-primary back">Back</button></a>
+			</form>
+		</div>
+		<div class="col-md-2"></div>
+	</div>
+</div>
+	
+</body>
+</html>

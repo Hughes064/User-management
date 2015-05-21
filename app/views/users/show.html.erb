@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Show</title>
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-4"></div>
+			<div class="col-md-4">
+				<h1>Welcome, <%= @oneUser.first_name %></h1>
+				<h3>We have the following information on file for you:</h3>
+				<p class="userInfo">Full name: <%= @oneUser.first_name + @oneUser.last_name %></p>
+				<p class="userInfo">Email Address: <%= @oneUser.email_address %></p>
+
+			</div>
+			<div class="col-md-4"></div>
+		</div>
+	</div>
+
+	
+</body>
+</html>

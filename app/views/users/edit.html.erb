@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Update User</title>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="/assets/style.css">
+	<link href='http://fonts.googleapis.com/css?family=Dancing+Script' rel='stylesheet' type='text/css'>
+</head>
+<body>
+<div class="container">
+	<div class="row">
+		<div class="col-md-2"></div>
+		<div class="col-md-8">
+			<h1>Update your information</h1>
+			<form action="/users/<%= @currentUser.id%>" method="post">
+				<input type= "hidden" name="authenticity_token" value="<%= form_authenticity_token %>"> 
+				<label for="first name">First Name</label>
+				<input class="form-control" type="text" name="fristName" value=<%= @currentUser.first_name %>>
+				<label for="first name">Last Name</label>
+				<input class="form-control" type="text" name="lastName" value=<%= @currentUser.last_name %>>
+				<label for="first name">Email address</label>
+				<input class="form-control" type="text" name="emailAddress" value=<%= @currentUser.email_address %>>
+				<label for="first name">password</label>
+				<input class="form-control" type="password" name="password"value=<%= @currentUser.email_address %>>
+				<button class="btn btn-primary create pull-right">Update</button>
+				<a href="/users/back"><button class="btn btn-primary back">Back</button></a>
+			</form>
+		</div>
+		<div class="col-md-2"></div>
+	</div>
+</div>	
+</body>
+</html>
